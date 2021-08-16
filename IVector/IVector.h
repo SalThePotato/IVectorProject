@@ -23,6 +23,9 @@ public:
 	// Overloaded Intalizer copy operator
 	IVector& operator=(const IVector& other);
 
+	// Overloaded the brackets operator to get the element at index. It doesn't check if it is valid memory 
+	int operator[](size_t index) const;
+
 	// Returns the size of the array
 	size_t get_size() const;
 
@@ -32,12 +35,23 @@ public:
 	// Displays our entire array to the console
 	void dump() const;
 
-	// Gets an element from the array at a certain index. Returns true or false depending if it was successful or not
-	// If it is succesful, we put the value in the Int out.
-	bool get(size_t index, int& out) const;
+	// Returns the element at location index. This will check if it is valid memory 
+	int at(size_t index) const;
 
-	// Sets a value in the vector at location index. 
-	void set(size_t index, int value) const;
+	// Sets a value in the vector at location index. Returns true or false depending if it was successful or not
+	bool set(size_t index, int value) const;
+
+	// Return sum of elements in the ivector 
+	int sum() const;
+
+	// Returns the smallest value in the ivector
+	int min() const;
+
+	// Returns the biggest value in the ivector
+	int max() const;
+	
+	// Swaps the values at the locations provided in the ivector
+	void swap(size_t index_one, size_t index_two);
 
 	// Destructor
 	~IVector();
