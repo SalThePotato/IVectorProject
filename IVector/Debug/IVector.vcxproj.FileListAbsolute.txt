@@ -1,2 +1,0 @@
-C:\Users\salth\source\repos\IVector\Debug\IVector.exe
-C:\Users\salth\source\repos\IVector\Debug\IVector.pdb
